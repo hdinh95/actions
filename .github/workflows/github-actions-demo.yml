@@ -16,6 +16,10 @@ jobs:
       - name: Testing Python
         run: echo "Testing python"
 
+  Calling-Reusable-Actions:
+    needs: Testing
+    uses: .github/workflows/reusable-actions.yml
+
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     needs: Testing

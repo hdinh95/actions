@@ -1,0 +1,16 @@
+name: Another Action
+
+on:
+  workflow_call:
+    inputs:
+      value:
+        description: "A value for ECHO"
+        required: true
+        type: string
+jobs:
+
+  Install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Funny Step
+        run: echo "Did something fun ${{ inputs.value }}"
