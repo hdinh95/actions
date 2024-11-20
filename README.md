@@ -1,1 +1,1 @@
-This project is used to learn more about github actions
+This project is used to learn more about Github actions.
