@@ -1,0 +1,10 @@
+name: Another Action
+
+on: [push]
+jobs:
+
+  Install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Funny Step
+        run: echo "Did something fun"
