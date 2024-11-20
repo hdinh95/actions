@@ -18,7 +18,7 @@ jobs:
 
   Calling-Reusable-Actions:
     needs: Testing
-    uses: .github/workflows/reusable-actions.yml
+    uses: .github/workflows/reusable-actions.yml@main
     with:
       value: "Hello, World!"
 
