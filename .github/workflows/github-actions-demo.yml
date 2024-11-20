@@ -19,6 +19,8 @@ jobs:
   Calling-Reusable-Actions:
     needs: Testing
     uses: .github/workflows/reusable-actions.yml
+    with:
+      value: "Hello, World!"
 
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
