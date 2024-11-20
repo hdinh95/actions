@@ -1,3 +1,4 @@
+# Comment
 
 def __init__():
     print("Init application")
