@@ -6,17 +6,17 @@ on:
     branches: [ feature/* ]
 
 # Workflow Variables
-env:
-  ENVIRONMENT: feature
+#env:
+#  ENVIRONMENT: feature
 
 # Jobs
 jobs:
   build-and-install:
     uses: ./.github/workflows/build.yml
     with:
-      environment: ${{ env.ENVIRONMENT }}
+      environment: feature
 
   deploy:
     uses: ./.github/workflows/deploy.yml
     with:
-      environment: ${{ env.ENVIRONMENT }}
+      environment: feature
