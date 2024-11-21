@@ -17,6 +17,6 @@ jobs:
       environment: ${{ env.ENVIRONMENT }}
 
   deploy:
-    uses: ./.github/workflows/reusables/_deploy.yaml
+    uses: ./.github/workflows/_deploy.yaml
     with:
       environment: ${{ env.ENVIRONMENT }}
