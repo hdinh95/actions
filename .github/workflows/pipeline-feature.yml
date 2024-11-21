@@ -12,7 +12,7 @@ env:
 # Jobs
 jobs:
   build-and-install:
-    uses: ./.github/workflows/reusables/_build.yaml
+    uses: ./.github/workflows/_build.yaml
     with:
       environment: ${{ env.ENVIRONMENT }}
 
