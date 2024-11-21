@@ -3,7 +3,11 @@ name: "CICD Pipeline for Feature Branches"
 # Trigger WF only for Features
 on:
   pull_request:
-    branches: [ feature/* ]
+    types:
+      - opened
+    branches:
+      - main
+      - feature/*
 
 # Workflow Variables
 #env:
@@ -20,3 +24,9 @@ jobs:
     uses: ./.github/workflows/deploy.yml
     with:
       environment: feature
+
+  ending:
+    runs-on: ubuntu-latest
+    steps:
+      - name: End of Pipeline
+        run: echo "End of Pipeline ${{ github.branch }}"
