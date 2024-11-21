@@ -1,0 +1,21 @@
+name: Building Action
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: "To be utilized Environment"
+        required: true
+        type: string
+
+jobs:
+
+  building-phase:
+    runs-on: ubuntu/latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Preparing Building Step
+        run: echo "Build app package for Environment - ${{ inputs.environment }}"
+
+      - name: Build Application using Java ${{ vars.JAVA_VERSION}}
+        run: echo "Using Java ${{ vars.JAVA_VERSION }}"

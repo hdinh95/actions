@@ -1,0 +1,19 @@
+name: Deploying Action
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: "To be utilized Environment"
+        required: true
+        type: string
+
+
+jobs:
+
+  building-phase:
+    runs-on: ubuntu/latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Deploying Step
+        run: echo "Deploy application for Environment - ${{ inputs.environment }}"

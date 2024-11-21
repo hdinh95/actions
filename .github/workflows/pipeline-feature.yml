@@ -1,0 +1,22 @@
+name: "CICD Pipeline for Feature Branches"
+
+# Trigger WF only for Features
+on:
+  push:
+    branches: [ feature/* ]
+
+# Workflow Variables
+env:
+  ENVIRONMENT: feature
+
+# Jobs
+jobs:
+  build-and-install:
+    uses: ./.github/workflows/reusables/_build.yaml
+    with:
+      environment: ${{ env.ENVIRONMENT }}
+
+  deploy:
+    uses: ./.github/workflows/reusables/_deploy.yaml
+    with:
+      environment: ${{ env.ENVIRONMENT }}
