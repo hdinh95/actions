@@ -11,7 +11,7 @@ on:
 jobs:
 
   building-phase:
-    runs-on: ubuntu/latest
+    runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
       - name: Preparing Building Step
